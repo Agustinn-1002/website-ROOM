@@ -21,10 +21,10 @@ const Header = () => {
     const [heroSlider , setHeroSlider] = useState(0)       //creamos variable para realizar el cambio de estado
 
     const leftArrow = () =>{
-        setHeroSlider(heroSlider === 0? numHeroSlider : heroSlider - 1);  //restamos un numero en caso de que el num del estado no sea 0, si es 0 vulve a la cantidad de numHeroSlider..
+        setHeroSlider(heroSlider === 0? numHeroSlider : heroSlider - 1 );  //restamos un numero en caso de que el num del estado no sea 0, si es 0 vulve a la cantidad de numHeroSlider..
     }
     const rigthArrow = () =>{
-        setHeroSlider(heroSlider === numHeroSlider? 0 : heroSlider + 1);  //sumamos un numero en caso de que el num del estado no sea el mismo que la cantidad de numHeroSlider, si es asi vuelve a 0...
+        setHeroSlider(heroSlider === numHeroSlider? 0 : heroSlider + 1 );  //sumamos un numero en caso de que el num del estado no sea el mismo que la cantidad de numHeroSlider, si es asi vuelve a 0...
     }
     return ( 
             <PageHeader>
