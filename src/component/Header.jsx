@@ -16,18 +16,15 @@ import {
 import { InfoImgSlider } from '../data/ImagenesDataSlider';
 
 const Header = () => {
+    const lenth = InfoImgSlider.length;         //traer valor cantidad de objetos en la data... (3)
+    const numHeroSlider = lenth-1;              //restar un numero ya que el map() empieza desde el 0... length = (2)
+    const [heroSlider , setHeroSlider] = useState(0)       //creamos variable para realizar el cambio de estado
 
-    const lenth = InfoImgSlider.length;
-
-    const numHeroSlider = lenth-1;
-
-    const [heroSlider , setHeroSlider] = useState((lenth - lenth))
-    // console.log(heroSlider)
     const leftArrow = () =>{
-        heroSlider === 0? setHeroSlider(numHeroSlider) : setHeroSlider(heroSlider - 1);  
+        setHeroSlider(heroSlider === 0? numHeroSlider : heroSlider - 1);  //restamos un numero en caso de que el num del estado no sea 0, si es 0 vulve a la cantidad de numHeroSlider..
     }
     const rigthArrow = () =>{
-        heroSlider === numHeroSlider? setHeroSlider(0) : setHeroSlider(heroSlider + 1);
+        setHeroSlider(heroSlider === numHeroSlider? 0 : heroSlider + 1);  //sumamos un numero en caso de que el num del estado no sea el mismo que la cantidad de numHeroSlider, si es asi vuelve a 0...
     }
     return ( 
             <PageHeader>
