@@ -4,7 +4,6 @@ import BtnArrowSliderLeft from '../images/icon-angle-left.svg';
 import BtnArrowSliderRight from '../images/icon-angle-right.svg';
 
 const mobile = '375';
-const tablet = '800';
 
 export const PageHeader = styled.div`
     display:flex;
