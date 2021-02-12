@@ -1,31 +1,43 @@
-import styled from 'styled-components';
+import styled,{css} from 'styled-components';
 import ArrowRigth from '../images/icon-arrow.svg';
+import BtnArrowSliderLeft from '../images/icon-angle-left.svg';
+import BtnArrowSliderRight from '../images/icon-angle-right.svg';
 
 const mobile = '375';
+const tablet = '800';
 
+export const PageHeader = styled.div`
+    display:flex;
+    overflow:hidden;
+`;
 export const ImagenData = styled.div`
     display:flex;
+    width:100%;
 @media(max-width:${mobile}px){
     flex-direction:column;
+    width:100%;
 } 
 `;
 export const ImagenShop = styled.div`
+    position:relative;
     height:480px;
-    width:800px;
     background-image:url(${props => props.desktop});
     background-repeat:none;
     background-size:cover;
     background-position:center;
+    width:500vh;
     
 @media(max-width:${mobile}px){
+    position:relative;
     background-image:url(${props => props.mobile});
     height:360px;
     width:375px;
 };
 `;
 export const InfoImg = styled.div`
-    width:380px;
+    position:relative;
     height:480px;
+    width:1600px;
     display:flex;
     justify-content:center;
     align-items:start;
@@ -33,7 +45,8 @@ export const InfoImg = styled.div`
     padding:0 90px;
 
 @media(max-width:${mobile}px){
-    width:375px;
+    position:relative;
+    width:100%;
     height:300px;
     margin:20px 0;
     padding:0;
@@ -75,7 +88,45 @@ export const ButtonShop = styled.a`
     opacity:0.6;
 };
 `;
-
 export const Arrow = styled.img.attrs({src:ArrowRigth})`
-`
+`;
 
+const arrowsSlider = css`
+    object-fit:contain;
+    width:2rem;
+    height:1.5rem;
+    border:none;
+    outline:none;
+`
+export const SlideBtns = styled.div`
+    display:flex;
+    position:absolute;
+    bottom:0;
+    left:0;
+
+@media(max-width:${mobile}px){    
+    position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    top:-399px;
+    right:-184px;
+}
+
+`;
+export const ContainerBtnSlider = styled.div`
+    background:#000;
+    padding:1.5rem 1.5rem;
+    cursor:pointer;
+&:hover{
+    background:#454545;
+}
+`
+export const BtnArrowLeft = styled.img.attrs({src:BtnArrowSliderLeft})`
+    ${arrowsSlider};
+    margin-right:5px;
+`;
+export const BtnArrowRight = styled.img.attrs({src:BtnArrowSliderRight})`
+    ${arrowsSlider}
+    margin-left:5px;
+`;

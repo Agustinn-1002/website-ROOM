@@ -2,18 +2,28 @@ import styled from 'styled-components';
 import IconLogo from '../images/logo.svg';
 import HamburgerLogo from '../images/icon-hamburger.svg';
 
-const mobile = '375'
+const tablet = '800';
+const mobile = '375';
 
 export const Nav = styled.nav`
     position:absolute;
     display:flex;
     align-items:center;
     width:55%;
+    z-index:100000000;
     height:100px;
     justify-content:start;
+
+@media (max-width: ${tablet}px){
+    top:5rem;
+    left:2rem;
+    align-items:start;
+    flex-direction:column;
+} 
 @media (max-width: ${mobile}px){
-    width:375px;
-    justify-content:space-evenly;
+    width:55%;
+    flex-direction:row;
+    justify-content:space-around;
 }
 `;
 export const Logo = styled.img.attrs({ src:IconLogo})`
@@ -21,9 +31,14 @@ export const Logo = styled.img.attrs({ src:IconLogo})`
     margin-right:40px;
     /* transform:translate(-100%,0); */
 
-@media (max-width: ${mobile}px){
+@media (max-width: ${tablet}px){
+    width:100px;
     padding-left:0;
-    transform:translate(20%,0); 
+    margin-bottom:40px;
+} 
+@media (max-width: ${mobile}px){
+    width:auto;
+     transform:translate(120%,0); 
 }
 `;
 
@@ -32,32 +47,43 @@ export const Hamburger = styled.div`
     display:none;
 
 @media(max-width:${mobile}px){
-    display:block;
+    display:inline;
     background-image:url('${HamburgerLogo}');
     padding:0;
     margin:0;
     background-repeat:none;
-    background-size:cover;
-    background-position:center;
-    height:20px;
+    height:15px;
     width:20px;
-    /* transform:translate(-100%,10%);  */
 }
 `;
 export const NavLink = styled.a`
     text-decoration:none;
+    position:relative;
     color:#000;
     margin:0 1rem;
     color:#fff;
     font-size:1rem;
-    padding-bottom:10px;
     transition:all 1s;
+    padding-bottom:5px;
     &:hover{
-        border-bottom:1px solid #fff;
+        &:after{
+            content:'';
+            position:absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width:15px;
+            border-bottom:2px solid #fff;
+        }
     }
-
-
+@media (max-width: ${tablet}px){
+    display:block;
+    margin: 2rem 0;
+    color:#888;
+} 
 @media (max-width: ${mobile}px){
+    color:#fff;
     display:none;
 } 
 `;
