@@ -103,6 +103,10 @@ export const SlideBtns = styled.div`
     bottom:0;
     left:0;
 
+
+@media (max-width: ${tablet}px){
+    right:0;
+} 
 @media(max-width:${mobile}px){    
     position:absolute;
     width:100%;
