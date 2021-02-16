@@ -17,7 +17,7 @@ const Navbar = (props) => {
                 <Logo></Logo>
                 <div>
                     {navLinks.map((items, index) => ( 
-                        <NavLink key={index} href={'#'+items.route}>{items.title}</NavLink>
+                        <NavLink key={index} href={items.route}>{items.title}</NavLink>
                     ))}
                 </div>
             </Nav>
