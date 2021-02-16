@@ -9,6 +9,7 @@ export const AboutContainer = styled.div`
 @media(max-width:${tablet}px){
     flex-direction:column;
     justify-content:center;
+    align-items:center;
 }
 @media(max-width:${mobile}px){
     flex-direction:column;
