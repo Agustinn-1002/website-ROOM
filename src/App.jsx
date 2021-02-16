@@ -12,11 +12,11 @@ function App() {
   } 
 
   return (
-    <div>
+    <>
       <GlobalStyle />
       <Navbar dropDown={dropDown} dropNav={dropNav}></Navbar>
       <Header></Header>
-    </div>
+    </>
   );
 }
 export default App;
