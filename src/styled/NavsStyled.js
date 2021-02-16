@@ -16,12 +16,12 @@ export const Nav = styled.nav`
 
 @media (max-width: ${tablet}px){
     top:5rem;
-    left:2rem;
+    left:5rem;
     align-items:start;
     flex-direction:column;
 } 
 @media (max-width: ${mobile}px){
-    width:55%;
+    width:50%;
     flex-direction:row;
     justify-content:space-around;
 }
@@ -80,10 +80,10 @@ export const NavLink = styled.a`
 @media (max-width: ${tablet}px){
     display:block;
     margin: 2rem 0;
-    color:#888;
+
 } 
 @media (max-width: ${mobile}px){
-    color:#fff;
+
     display:none;
 } 
 `;

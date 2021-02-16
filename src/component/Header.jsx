@@ -50,7 +50,6 @@ const Header = () => {
                                         </InfoImg>
                                     </>
                                 )}
-
                             </ImagenData>
                         )
             })}

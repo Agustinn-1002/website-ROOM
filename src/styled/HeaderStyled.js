@@ -105,11 +105,11 @@ export const SlideBtns = styled.div`
 
 @media(max-width:${mobile}px){    
     position:absolute;
+    width:100%;
     display:flex;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-end;
     top:-399px;
-    right:-184px;
 }
 
 `;

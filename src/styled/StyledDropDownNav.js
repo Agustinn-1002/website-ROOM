@@ -1,4 +1,4 @@
-import styled,{keyframes} from 'styled-components'
+import styled from 'styled-components'
 import CloseMenuNav from '../images/icon-close.svg'
 
 const mobile_L = '375';
@@ -18,18 +18,18 @@ export const NavMoble = styled.div`
     height:110px;
     background:#fff;
     color:#fff;
-    z-index:1000000;
+    z-index:1000000000;
 }
 `;
-export const ColorNav = styled.div`   
-    margin-top:${({dropDown})=>dropDown?'0':'-1100px'}; 
+export const ColorNav = styled.div`    
+    transition:all 0.3s;
+    top:${({dropDown})=>dropDown?'0':'-100%'};
+    opacity:${({dropDown})=>dropDown?'.55':'0'};
     z-index:100000;
-    transition:all 0.4s;
     position:absolute;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.55);
-
+    background:#000;
 `
 
 export const CloseMenuMobile = styled.div`
