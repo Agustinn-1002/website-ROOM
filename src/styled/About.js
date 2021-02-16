@@ -8,6 +8,7 @@ export const AboutContainer = styled.div`
     justify-content:space-between;
 @media(max-width:${tablet}px){
     flex-direction:column;
+    justify-content:center;
 }
 @media(max-width:${mobile}px){
     flex-direction:column;
