@@ -107,7 +107,11 @@ export const SlideBtns = styled.div`
 
 
 @media (max-width: ${tablet}px){
-    right:0;
+    position:absolute;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
 } 
 @media(max-width:${mobile}px){    
     position:absolute;
