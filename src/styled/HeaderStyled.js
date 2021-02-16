@@ -24,7 +24,7 @@ export const ImagenShop = styled.div`
     background-repeat:none;
     background-size:cover;
     background-position:center;
-    width:500vh;
+    width:550vh;
     
 @media(max-width:${mobile}px){
     position:relative;
@@ -117,15 +117,16 @@ export const ContainerBtnSlider = styled.div`
     background:#000;
     padding:1.5rem 1.5rem;
     cursor:pointer;
+    margin-right:-1px;
 &:hover{
     background:#454545;
 }
 `
 export const BtnArrowLeft = styled.img.attrs({src:BtnArrowSliderLeft})`
     ${arrowsSlider};
-    margin-right:5px;
+    padding-right:5px;
 `;
 export const BtnArrowRight = styled.img.attrs({src:BtnArrowSliderRight})`
     ${arrowsSlider}
-    margin-left:5px;
+    padding-left:5px;
 `;

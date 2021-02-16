@@ -20,7 +20,7 @@ const DropDownNav = (props) => {
                     )}
                 </div>
             </NavMoble>
-            <ColorNav dropDown={props.dropDown}/>
+            <ColorNav onClick={() => props.dropNav()} dropDown={props.dropDown}/>
         </div>
 
      );

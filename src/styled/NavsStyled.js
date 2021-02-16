@@ -22,8 +22,9 @@ export const Nav = styled.nav`
 } 
 @media (max-width: ${mobile}px){
     width:50%;
+    left:2rem;
     flex-direction:row;
-    justify-content:space-around;
+    justify-content:space-between;
 }
 `;
 export const Logo = styled.img.attrs({ src:IconLogo})`
@@ -37,8 +38,9 @@ export const Logo = styled.img.attrs({ src:IconLogo})`
     margin-bottom:40px;
 } 
 @media (max-width: ${mobile}px){
+    margin:0;  
     width:auto;
-     transform:translate(120%,0); 
+    transform:translate(100%,0); 
 }
 `;
 
