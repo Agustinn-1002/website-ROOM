@@ -3,8 +3,8 @@ import ArrowRigth from '../images/icon-arrow.svg';
 import BtnArrowSliderLeft from '../images/icon-angle-left.svg';
 import BtnArrowSliderRight from '../images/icon-angle-right.svg';
 
-const mobile = '375';
-const tablet = '800';
+const mobile = '425';
+const tablet = '1000';
 
 
 export const PageHeader = styled.div`
@@ -32,7 +32,7 @@ export const ImagenShop = styled.div`
     position:relative;
     background-image:url(${props => props.mobile});
     height:360px;
-    width:375px;
+    width:425px;
 };
 `;
 export const InfoImg = styled.div`

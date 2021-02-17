@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const mobile = '375';
+const mobile = '425';
 const tablet = '1000';
 
 export const AboutContainer = styled.div`

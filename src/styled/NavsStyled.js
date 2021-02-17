@@ -3,7 +3,7 @@ import IconLogo from '../images/logo.svg';
 import HamburgerLogo from '../images/icon-hamburger.svg';
 
 const tablet = '800';
-const mobile = '375';
+const mobile = '425';
 
 export const Nav = styled.nav`
     position:absolute;

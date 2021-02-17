@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import CloseMenuNav from '../images/icon-close.svg'
 
-const mobile_L = '375';
+const mobile_L = '425';
 const mobile_M = '300';
 
 export const NavMoble = styled.div`
